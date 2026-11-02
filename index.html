@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#061428">
+<title>Seven Months Under the Same Sea ♡</title>
+<style>
+:root {
+  --deep: #061428;
+  --navy: #0a1c36;
+  --mid: #122a4a;
+  --teal: #1a3d55;
+  --soft-blue: #7eb8d4;
+  --moon: #c5e0ef;
+  --foam: #e8f4f8;
+  --pink-soft: #e8c4d4;
+  --glass: rgba(10, 28, 52, 0.55);
+  --line: rgba(126, 184, 212, 0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 18px; }
+body {
+  color: #e4eef5;
+  background: #061428;
+  font-family: Georgia, 'Times New Roman', serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  line-height: 1.7;
+  background-image:
+    radial-gradient(ellipse 140% 90% at 50% -15%, #0f2a48 0%, #081c34 40%, #04101f 100%);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.38;
+  background-image:
+    radial-gradient(1.2px 1.2px at 14% 22%, #d0e8f4 50%, transparent 70%),
+    radial-gradient(1px 1px at 72% 18%, #b8d8e8 50%, transparent 70%),
+    radial-gradient(1.4px 1.4px at 48% 65%, #c8e0ec 50%, transparent 70%),
+    radial-gradient(1px 1px at 88% 78%, #a8d0e0 50%, transparent 70%),
+    radial-gradient(1.1px 1.1px at 28% 88%, #d8ecf4 50%, transparent 70%),
+    radial-gradient(1px 1px at 60% 40%, #b0d4e4 50%, transparent 70%);
+  background-size: 380px 340px;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.06;
+  background:
+    linear-gradient(105deg, transparent 40%, rgba(80, 140, 170, 0.12) 50%, transparent 60%),
+    linear-gradient(160deg, transparent 30%, rgba(60, 120, 150, 0.08) 50%, transparent 70%);
+}
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+aside {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 28px 14px;
+  background: rgba(6, 18, 36, 0.78);
+  border-right: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+.brand { text-align: center; margin-bottom: 26px; }
+.brand .logo { font-size: 26px; opacity: 0.9; }
+.brand p { font-size: 11px; color: #8aadc0; margin-top: 10px; line-height: 1.55; }
+nav { display: grid; gap: 4px; }
+nav a {
+  text-decoration: none;
+  color: #a8c8d8;
+  padding: 10px 11px;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+nav a:hover, nav a:focus {
+  background: rgba(30, 60, 90, 0.6);
+  color: #e0f0f8;
+  outline: none;
+}
+.aside-footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 11px;
+  color: #6a90a8;
+  font-style: italic;
+  line-height: 1.65;
+}
+main {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  padding: 0 28px 70px;
+  min-width: 0;
+}
+section { padding: 60px 0; text-align: center; }
+.kicker {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font: 10px/1 system-ui, -apple-system, sans-serif;
+  color: #6a9ab0;
+  margin-bottom: 12px;
+}
+h1 {
+  font-size: clamp(2.3rem, 4.8vw, 4.2rem);
+  font-weight: normal;
+  line-height: 1.05;
+  margin: 10px 0 16px;
+  color: #e8f4f8;
+  letter-spacing: -0.01em;
+}
+h2 {
+  font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+  font-weight: normal;
+  margin: 0 0 14px;
+  color: #d4e8f0;
+}
+h3 { color: #c0dce8; font-weight: normal; margin: 0 0 6px; font-size: 1.2rem; }
+p { color: #b8d0dc; font-size: 1rem; }
+.subtitle {
+  font-style: italic;
+  color: #d4b8c8;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid rgba(126, 184, 212, 0.35);
+  border-radius: 999px;
+  padding: 11px 20px;
+  background: rgba(16, 40, 68, 0.55);
+  color: #e0f0f8;
+  font: 12px/1 system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+}
+.btn:hover {
+  background: rgba(28, 60, 95, 0.7);
+  border-color: rgba(126, 184, 212, 0.55);
+}
+.btn.secondary { background: transparent; }
+.hero {
+  min-height: 86vh;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 20px;
+  align-items: center;
+  text-align: left;
+  padding-top: 36px;
+}
+.hero-copy { position: relative; z-index: 1; }
+.hero-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 320px;
+}
+.hero-art::before {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(60, 120, 160, 0.07);
+}
+.jelly-svg {
+  width: min(100%, 310px);
+  height: auto;
+  filter: drop-shadow(0 0 16px rgba(100, 180, 210, 0.22));
+  animation: float 5s ease-in-out infinite;
+  position: relative;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-11px) rotate(2deg); }
+}
+.bubble {
+  position: fixed;
+  bottom: -30px;
+  z-index: -1;
+  border: 1px solid rgba(140, 190, 210, 0.22);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: drift linear infinite;
+  opacity: 0.45;
+}
+@keyframes drift {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  15% { opacity: 0.35; }
+  85% { opacity: 0.25; }
+  100% { transform: translateY(-10vh) translateX(20px); opacity: 0; }
+}
+.panel {
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px 26px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(10px);
+}
+.envelopes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0 8px;
+}
+.letter-card {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.22s, box-shadow 0.22s;
+  text-align: left;
+}
+.letter-card summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 112px;
+  padding: 15px 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.letter-card summary::-webkit-details-marker { display: none; }
+.letter-card summary span { font-size: 22px; opacity: 0.9; }
+.letter-card summary strong {
+  font-weight: normal;
+  font-size: 0.92rem;
+  color: #f0f6fa;
+}
+.letter-card summary small {
+  color: rgba(220, 235, 245, 0.65);
+  font: 11px system-ui, -apple-system, sans-serif;
+}
+.letter-card[open] {
+  grid-column: 1 / -1;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+.letter-content {
+  white-space: pre-line;
+  line-height: 1.85;
+  padding: 4px 22px 22px;
+  color: #e0ecf2;
+  font-size: 0.97rem;
+  max-height: 480px;
+  overflow-y: auto;
+}
+.letter-content::-webkit-scrollbar { width: 5px; }
+.letter-content::-webkit-scrollbar-thumb {
+  background: rgba(126, 184, 212, 0.3);
+  border-radius: 4px;
+}
+.e1 { background: linear-gradient(160deg, #1a3a5c, #122a48); }
+.e2 { background: linear-gradient(160deg, #3a2a48, #2a1e38); }
+.e3 { background: linear-gradient(160deg, #2a3858, #1e2a44); }
+.e4 { background: linear-gradient(160deg, #1a3a48, #122e3a); }
+.e5 { background: linear-gradient(160deg, #3a3028, #2a241c); }
+.e6 { background: linear-gradient(160deg, #1a3550, #122840); }
+.e7 { background: linear-gradient(160deg, #3a2848, #2a1e38); }
+.letter-card:hover { transform: translateY(-2px); }
+.letter-card[open]:hover { transform: none; }
+
+/* SECCIÓN DE DIBUJOS DESPLEGABLES */
+.doodles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 26px auto;
+  max-width: 820px;
+}
+.doodle-card {
+  border-radius: 16px;
+  border: 1px solid rgba(126, 184, 212, 0.2);
+  background: rgba(10, 26, 46, 0.55);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.doodle-card:hover {
+  border-color: rgba(126, 184, 212, 0.45);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+.doodle-trigger {
+  width: 100%;
+  padding: 16px 22px;
+  background: rgba(16, 40, 68, 0.45);
+  border: none;
+  color: #e0f0f8;
+  font-family: inherit;
+  font-size: 1.05rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: background 0.2s, color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.doodle-trigger:hover, .doodle-trigger:focus {
+  background: rgba(28, 60, 95, 0.65);
+  color: #ffffff;
+  outline: none;
+}
+.doodle-trigger .trigger-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.doodle-trigger .trigger-icon {
+  font-size: 22px;
+}
+.doodle-trigger .trigger-title {
+  font-weight: normal;
+}
+.doodle-trigger .trigger-arrow {
+  font-size: 14px;
+  color: #7eb8d4;
+  transition: transform 0.3s ease;
+}
+.doodle-card.active .doodle-trigger .trigger-arrow {
+  transform: rotate(180deg);
+}
+.doodle-panel {
+  display: none;
+  padding: 22px;
+  border-top: 1px solid rgba(126, 184, 212, 0.15);
+  background: rgba(6, 20, 40, 0.4);
+}
+.doodle-card.active .doodle-panel {
+  display: block;
+  animation: appear 0.35s ease-out;
+}
+.doodle-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+.doodle-img-wrap {
+  flex: 0 0 42%;
+  max-width: 380px;
+  min-width: 250px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(126, 184, 212, 0.22);
+  background: #0a1c30;
+}
+.doodle-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.doodle-text {
+  flex: 1;
+  text-align: left;
+}
+.doodle-text h3 {
+  font-size: 1.25rem;
+  color: #e8f4f8;
+  margin-bottom: 10px;
+}
+.doodle-text p {
+  color: #d8c0d0;
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.ocean-row {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 24px;
+}
+.ocean-light {
+  border: 1px solid rgba(126, 184, 212, 0.16);
+  background: rgba(12, 32, 52, 0.55);
+  border-radius: 13px;
+  padding: 13px 4px;
+  cursor: pointer;
+  color: #d8ecf4;
+  transition: background 0.2s, transform 0.2s;
+  min-width: 0;
+}
+.ocean-light:hover {
+  background: rgba(24, 52, 78, 0.7);
+  transform: translateY(-2px);
+}
+.ocean-light span {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 4px;
+  opacity: 0.9;
+}
+.ocean-light small {
+  font-size: 10px;
+  display: block;
+  opacity: 0.75;
+}
+#oceanMessage {
+  display: none;
+  margin-top: 18px;
+  padding: 14px 20px;
+  background: rgba(12, 32, 52, 0.55);
+  border-radius: 13px;
+  border: 1px solid rgba(126, 184, 212, 0.16);
+  color: #c8e0ec;
+  font-style: italic;
+}
+#oceanMessage.show {
+  display: block;
+  animation: appear 0.3s ease;
+}
+.music-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  text-align: left;
+  margin-top: 22px;
+}
+.song {
+  border: 1px solid rgba(126, 184, 212, 0.14);
+  border-radius: 16px;
+  background: rgba(10, 26, 46, 0.6);
+  padding: 20px 22px;
+}
+.song .music-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+.song p {
+  margin: 8px 0;
+  font-size: 0.94rem;
+  color: #b0c8d4;
+}
+.song .links {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.video-wrap {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0a1a2c;
+  aspect-ratio: 16/9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.final-letter {
+  display: none;
+  text-align: left;
+  max-width: 660px;
+  margin: 20px auto 0;
+  white-space: pre-line;
+  line-height: 1.85;
+  color: #d0e4ec;
+}
+.final-letter.show {
+  display: block;
+  animation: appear 0.35s ease;
+}
+footer {
+  padding: 36px 0 48px;
+  text-align: center;
+  color: #6a90a8;
+  font-size: 0.88rem;
+}
+footer .hearts {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  aside {
+    position: relative;
+    height: auto;
+    padding: 12px 14px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand p, .aside-footer { display: none; }
+  nav {
+    display: flex;
+    overflow-x: auto;
+    gap: 4px;
+    padding-bottom: 4px;
+  }
+  nav a {
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 48px 0 28px;
+  }
+  .hero-art {
+    min-height: 210px;
+    grid-row: 1;
+  }
+  .jelly-svg { width: 220px; }
+  .hero-copy { grid-row: 2; }
+  main { padding: 0 16px 50px; }
+  section { padding: 46px 0; }
+  .envelopes { grid-template-columns: repeat(2, 1fr); }
+  .music-list { grid-template-columns: 1fr; }
+  .ocean-row { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 768px) {
+  .doodle-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .doodle-img-wrap {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  .doodle-text {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .ocean-row { grid-template-columns: repeat(3, 1fr); }
+  h1 { font-size: 2.2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside>
+    <div class="brand">
+      <div class="logo">🪼</div>
+      <p>Un océano de pequeñas<br>cosas que amo de ti.</p>
+    </div>
+    <nav aria-label="Navegación">
+      <a href="#home">Inicio</a>
+      <a href="#letters">Cartas</a>
+      <a href="#doodles">Dibujos</a>
+      <a href="#memories">Recuerdos</a>
+      <a href="#ocean">Océano</a>
+      <a href="#song">Música</a>
+      <a href="#secret">Sorpresa</a>
+    </nav>
+    <div class="aside-footer">
+      Gracias por existir,<br>por ser tú.<br><br>— Oliver ♡
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="kicker">nuestro pequeño universo</div>
+        <h1>Seven Months<br>Under the Same Sea</h1>
+        <p class="subtitle">Un océano de pequeñas cosas que amo de ti.</p>
+        <p style="margin-bottom:18px;color:#a8c4d4">Para mi amor, Kaelen. Preparé un pequeño universo para ti: con palabras, canciones, dibujos y una medusita que te representa. ¿Lo exploramos juntos?</p>
+        <a class="btn" href="#letters">Abrir mi regalo</a>
+        <p style="margin-top:16px;font-size:12px;color:#6a90a8">Hecho con cariño, una lucecita a la vez</p>
+      </div>
+      <div class="hero-art" aria-label="Medusita">
+        <svg class="jelly-svg" viewBox="0 0 320 350" role="img">
+          <defs>
+            <linearGradient id="bell" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#b8e0f0"/><stop offset=".5" stop-color="#8ab0d0"/><stop offset="1" stop-color="#d0b0c8"/>
+            </linearGradient>
+            <linearGradient id="tentacle" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#90c8e0"/><stop offset="1" stop-color="#b898c0"/>
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#tentacle)" stroke-width="6.5" stroke-linecap="round" opacity="0.85">
+            <path d="M105 177 C83 222 118 242 99 282"/>
+            <path d="M132 188 C118 230 151 251 135 300"/>
+            <path d="M160 190 C145 236 177 263 164 312"/>
+            <path d="M186 188 C210 224 178 253 207 288"/>
+            <path d="M211 175 C241 210 213 242 237 270"/>
+          </g>
+          <path d="M63 151 C63 80 112 45 160 45 C213 45 259 83 258 151 C240 178 209 193 160 193 C111 193 81 178 63 151Z" fill="url(#bell)" stroke="#d0e8f0" stroke-width="3.5"/>
+          <path d="M77 143 C86 92 119 67 157 65" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="4" stroke-linecap="round"/>
+          <ellipse cx="128" cy="139" rx="6.5" ry="10" fill="#2a3a58"/>
+          <ellipse cx="192" cy="139" rx="6.5" ry="10" fill="#2a3a58"/>
+          <path d="M149 154 Q160 164 172 154" fill="none" stroke="#8a6080" stroke-width="3.5" stroke-linecap="round"/>
+          <ellipse cx="110" cy="156" rx="11" ry="5.5" fill="#e0a0c0" opacity=".55"/>
+          <ellipse cx="210" cy="156" rx="11" ry="5.5" fill="#e0a0c0" opacity=".55"/>
+          <path d="M126 46 L138 26 L160 40 L182 26 L194 46" fill="none" stroke="#e0d0a0" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="160" cy="26" r="4.5" fill="#e0d0a0"/>
+          <path d="M245 65 l6 13 14 2 -11 10 3 14 -12 -7 -12 7 3 -14 -11 -10 14 -2Z" fill="#e0d0a0" opacity="0.9"/>
+          <g fill="#c8e0ec" opacity="0.7"><circle cx="60" cy="91" r="3.5"/><circle cx="259" cy="218" r="2.5"/><circle cx="73" cy="244" r="2.5"/><circle cx="221" cy="319" r="3.5"/></g>
+          <text x="160" y="344" text-anchor="middle" fill="#a8c8d8" font-size="12" font-family="Georgia,serif">la medusita de Kaelen</text>
+        </svg>
+      </div>
+    </section>
+
+    <section id="letters">
+      <div class="kicker">01 · mensajes en botellas</div>
+      <h2>Siete cartitas para ti</h2>
+      <p style="max-width:480px;margin:0 auto 6px;color:#8aadc0">Elige una. Cada sobre guarda una parte de lo que quiero decirte.</p>
+      <div class="envelopes">
+        <details class="letter-card e1">
+          <summary><span>✉️</span><strong>Donde comenzó nuestra luz</strong><small>nuestro comienzo</small></summary>
+          <div class="letter-content">01. Donde comenzó nuestra luz
+
+Amor mío…
+
+A veces me detengo a pensar en lo curioso que es el destino. En todas las personas que existen, en los caminos que pudieron tomar nuestras vidas y en la inmensa cantidad de posibilidades que había antes de que nuestros mundos coincidieran. Y, entre tantas casualidades, terminé encontrándote a ti. No sé qué tuvo que suceder para que nuestros caminos se cruzaran, pero hay algo que tengo muy claro: qué afortunado me siento de que así fuera.
+
+Quizá nunca encuentre una explicación suficientemente bonita para describir lo que significa tenerte en mi vida. Porque no se trata únicamente de haber conocido a alguien a quien quiero muchísimo; se trata de haber descubierto a una persona cuya existencia ha terminado significando tanto para mí. Alguien de quien todavía quiero aprender, a quien todavía quiero escuchar y con quien sigo encontrando pequeños motivos para sonreír.
+
+Me gusta pensar que el mundo está lleno de personas extraordinarias que quizá nunca llegaremos a conocer. Cada una con sus propios pensamientos, sueños, historias y maneras de mirar la vida. Y entre todas ellas tuve la fortuna de coincidir contigo. Con tu manera de ser, tus ocurrencias, tus ideas y esa personalidad que, incluso después de estos meses, sigue despertando mi curiosidad.
+
+Hay algo especialmente bonito en descubrir a una persona poco a poco. Darme cuenta de que todavía existen cosas que no sé de ti, que aún puedo sorprenderme con alguna de tus ideas o conocer una nueva parte de tu mundo. No quiero apresurarme a descubrirlo todo; me gusta la idea de seguir aprendiendo quién eres, incluso en esos detalles que quizá tú mismo consideres insignificantes.
+
+Y si pudiera pedirte algo, sería que nunca olvidaras lo especial que eres. No hablo de ser perfecto, de cumplir todas tus metas o de tener siempre una respuesta para cada cosa. Hablo de ti, de la persona que eres incluso cuando no estás intentando destacar, cuando tienes un día complicado o cuando simplemente no encuentras motivos para sentirte orgulloso de ti mismo. Ojalá pudieras mirarte con un poquito más de cariño y reconocer todo aquello que hay en ti y que merece ser apreciado.
+
+Me hace feliz saber de tus sueños, escucharte hablar de lo que te interesa y descubrir las cosas que te emocionan. Me alegra cuando estás contento, cuando algo te sale bien y cuando encuentras motivos para reírte. Y también quiero que sepas que no necesitas esconder tus días grises conmigo. No tienes que convertir cada conversación en un momento feliz ni sentir que debes mostrar siempre tu mejor versión. Me importa conocerte de verdad, con todo lo que eso significa.
+
+A veces quisiera guardar algunos instantes en algún lugar donde el tiempo no pudiera alcanzarlos. Una conversación especialmente bonita, alguna de tus risas, una ocurrencia que terminó haciéndome el día o simplemente uno de esos momentos en los que me doy cuenta de lo mucho que disfruto tenerte cerca, aunque sea a través de una pantalla. Son cosas pequeñas, sí, pero tienen un valor inmenso para mí.
+
+Y qué curioso, ¿verdad? Que alguien pueda convertirse en una de las partes favoritas de nuestros días sin siquiera proponérselo. Que una persona pueda aparecer en nuestros pensamientos al escuchar una canción, contemplar un cielo bonito o encontrar algo que inmediatamente queremos compartir con ella. Me sucede contigo más veces de las que podría contar.
+
+No sé si el destino tenía preparado este encuentro o si simplemente tuvimos la suerte de coincidir en el momento indicado. Pero, sea cual sea la respuesta, quiero agradecer por esta pequeña parte del universo que nos permitió encontrarnos.
+
+Entre tantas personas, tantos caminos y tantas historias posibles, me alegra que la nuestra exista. Me alegra que seas tú a quien puedo llamar amor, que seas tú quien despierta tantas sonrisas en mí y que todavía tenga la oportunidad de seguir descubriéndote.
+
+Si algo quisiera que recordaras al terminar de leer esta carta, es esto: no considero que haberte encontrado sea algo ordinario. Para mí, conocerte ha sido una de esas casualidades que uno termina agradeciendo una y otra vez.
+
+Qué fortuna la mía, haber coincidido contigo.
+
+Te amo muchísimo, mi príncipe hermoso. Y me alegra que, entre todas las posibilidades, nuestros caminos hayan elegido encontrarse.</div>
+        </details>
+        
+        <details class="letter-card e2">
+          <summary><span>🌙</span><strong>Amanecer contigo</strong><small>mi recuerdo favorito</small></summary>
+          <div class="letter-content">02. Amanecer contigo
+
+Hay algo que quisiera explicarte y que, aunque parezca sencillo, significa muchísimo para mí: qué bonito es compartir mis días contigo.
+
+A veces pensamos que los recuerdos más importantes tienen que estar relacionados con acontecimientos extraordinarios, con fechas especiales o con momentos que podamos señalar y decir: «Este fue uno de los días más felices de mi vida». Pero, cuando pienso en nosotros, descubro que hay algo que valoro incluso más: todos esos pequeños instantes en los que simplemente puedo disfrutar de ti.
+
+Me gusta saber cómo estuvo tu día, escuchar lo que tienes para contarme y descubrir qué cosas ocuparon tus pensamientos. Me gusta cuando compartes conmigo alguna emoción que no puedes contener, cuando tienes tantas cosas que decir que parece que las palabras no te alcanzan y cuando terminamos hablando de cualquier tontería sin darnos cuenta de cuánto tiempo ha pasado. Incluso esos momentos en los que no tenemos demasiado que contar me parecen bonitos. Porque no siempre necesitamos una historia interesante; a veces basta con tener ganas de compartir un ratito juntos.
+
+Si tuviera que elegir mi recuerdo favorito de estos meses, creo que no podría escoger una fecha en particular. Me quedaría contigo siendo tú. Con la oportunidad de verte feliz, emocionado, frustrado, triste, ilusionado. Me quedaría con todas esas versiones tuyas que he tenido la fortuna de conocer, porque cada una me ha permitido descubrir algo más de la persona que quiero.
+
+Y es que no quiero recordar solamente los días en los que todo salió bien. También quiero conservar aquellos en los que necesitaste desahogarte, en los que algo te preocupó o en los que simplemente no tenías demasiadas ganas de hacer nada. No porque disfrute verte pasar por momentos difíciles, sino porque incluso entonces me alegra que podamos compartir un espacio en el que no tengas que fingir que todo está bien.
+
+Hay algo que me emociona de pensar en los amaneceres. En esa tranquilidad particular que tienen las primeras horas del día, cuando el mundo parece comenzar de nuevo y todavía queda tanto por vivir. Me gusta imaginar todos los amaneceres que todavía nos esperan, las veces que tendremos algo nuevo que contarnos y las pequeñas cosas que terminarán formando parte de nuestra rutina. Quizá no todos sean perfectos, quizá algunos comiencen con sueño, cansancio o alguna que otra queja, pero espero que nunca nos falten motivos para recibirlos con ilusión.
+
+También quiero que sepas que no necesito que estés constantemente pendiente de mí para sentirme querido. Sé que tienes una vida propia, responsabilidades, sueños y muchas cosas que atender. Me alegra que tengas todo eso. Lo que valoro es que, entre tantas cosas que forman parte de tu mundo, podamos seguir encontrando momentos para compartir.
+
+Porque eso es lo que quiero: compartir contigo. No solamente las grandes noticias o los acontecimientos importantes, sino también los detalles que parecen no tener demasiada relevancia. Quiero conocer tus días, escuchar tus historias y descubrir qué cosas nuevas te hacen sonreír. Quiero que podamos mirar hacia atrás algún día y darnos cuenta de que construimos muchísimos recuerdos sin siquiera proponérnoslo.
+
+Y si alguna vez me preguntaras qué significa para mí amanecer contigo, creo que respondería que es tener la oportunidad de seguir encontrándote en mis días. Es saber que todavía hay conversaciones pendientes, risas que no hemos compartido y momentos que aún no imaginamos.
+
+No sé cuántos amaneceres nos esperan, amor, pero deseo que muchos de ellos nos encuentren con nuevas historias que contar y con la misma ilusión de seguir descubriéndonos.
+
+Porque, entre todas las cosas bonitas que puede traer un nuevo día, una de mis favoritas es tenerte en él.
+
+Te amo muchísimo, mi amor. ♡</div>
+        </details>
+        
+        <details class="letter-card e3">
+          <summary><span>🎵</span><strong>La melodía que tiene tu risa</strong><small>las cosas cotidianas</small></summary>
+          <div class="letter-content">03. La melodía que tiene tu risa
+
+Si tuviera que elegir uno de mis sonidos favoritos en todo el mundo, probablemente elegiría tu risa. Y no, no estoy exagerando. Hay algo en ella que me resulta particularmente bonito, algo que consigue transmitirme una felicidad difícil de explicar. Me gusta escucharte reír, saber que estás disfrutando de algo y descubrir que, de alguna manera, tu alegría termina contagiándome. A veces ni siquiera necesito conocer el motivo; basta con saber que estás feliz para que yo también termine sonriendo.
+
+Creo que nunca te he explicado cuánto disfruto de tus ocurrencias. Tienes una manera muy particular de hacer que una conversación tome caminos inesperados, y me encanta. Me gusta cuando dices alguna tontería sin previo aviso, cuando haces comentarios que me dejan pensando en cómo se te ocurrió semejante cosa y cuando terminamos riéndonos de algo que probablemente no tendría ninguna gracia para el resto del mundo. Aunque, siendo sinceros, a veces también me haces cuestionar seriamente qué clase de pensamientos pasan por tu cabeza, aunque yo estoy peor.. 🥰 JAJAJAJA.
+
+Pero precisamente eso me gusta. No quiero que pierdas esa espontaneidad que te caracteriza, esa capacidad de encontrar diversión en cosas pequeñas y de hacer que los momentos más ordinarios tengan algo especial. Me encanta conocer esa parte de ti que aparece cuando estás cómodo, cuando puedes hablar sin pensar demasiado en lo que vas a decir y cuando simplemente te permites ser tú mismo.
+
+También me gustan tus pequeñas particularidades. Esas expresiones tuyas que podría reconocer entre muchas otras, la forma en que cuentas determinadas cosas, tus reacciones y hasta las maneras en las que intentas explicar algo cuando las palabras no parecen cooperar contigo. Son detalles que quizá no recuerdes haber hecho, pero que yo termino guardando con muchísimo cariño.
+
+Y es curioso, porque muchas veces son precisamente esas cosas las que más extraño cuando no estamos conversando. No necesariamente una conversación profunda ni una declaración especialmente romántica. A veces simplemente quiero escuchar cómo te fue, saber qué hiciste o recibir alguno de esos mensajes tuyos que terminan cambiándome el humor. Me gusta que podamos compartir nuestras pequeñas alegrías y que, incluso en medio de un día cualquiera, encontremos un motivo para reírnos juntos.
+
+Hay algo que deseo muchísimo y es que nunca sientas que tienes que esconder esa parte de ti. Que nunca pienses que tus ocurrencias son demasiado tontas, que tu entusiasmo es exagerado o que debes moderar tu felicidad para no incomodar a nadie. Me gusta verte disfrutar, me gusta cuando algo te emociona y me encanta cuando te permites ser espontáneo. Ojalá siempre tengas espacios y personas con quienes puedas reírte sin preocuparte por nada más.
+
+Y, si alguna vez tienes un día en el que te cueste encontrar motivos para sonreír, quisiera poder recordarte todas esas pequeñas cosas que hacen que tu risa sea tan especial para mí. No para exigirte que estés feliz, sino para que sepas que incluso en tus días más tranquilos sigues siendo alguien a quien quiero muchísimo.
+
+Me gustaría seguir coleccionando tus risas. Las que aparecen después de una broma, las que intentas contener y no consigues, las que surgen de alguna conversación absurda y esas que llegan cuando menos las espero. Quiero seguir descubriendo qué cosas te hacen reír, qué nuevas ocurrencias pasaremos y cuántas veces más terminarás pensando que soy un completo idiota al que, lamentablemente, pero para mi fortuna, amas demasiado. JAJAJA.
+
+Quizá no exista una melodía capaz de describir exactamente lo que siento cuando te escucho reír. Pero, si algún día tuviera que escribir una canción sobre todas las pequeñas cosas que me hacen feliz, estoy seguro de que tu risa tendría un lugar muy especial en ella.
+
+Porque hay sonidos que acompañan nuestros días y otros que terminan convirtiéndose en recuerdos. El tuyo es de mis favoritos.
+
+Nunca dejes de reír, amor mío. El mundo necesita más momentos en los que puedas ser feliz, y yo espero tener la fortuna de escuchar muchos de ellos.
+
+Te amo muchísimo, mi príncipe. ♡
+
+Con una sonrisa que provocaste tú, tu estrellita.</div>
+        </details>
+        
+        <details class="letter-card e4">
+          <summary><span>🪼</span><strong>Tu universo, tal como eres</strong><small>todas tus versiones</small></summary>
+          <div class="letter-content">04. Tu universo, tal como eres.
+
+Oh, mi precioso..
+
+Si hay algo que quisiera que nunca olvidaras, es que no necesitas ser una persona extraordinaria a cada instante para ser alguien extraordinario en mi vida. No tienes que conseguir grandes cosas, tener siempre las palabras adecuadas ni encontrar una solución para cada problema. Tampoco necesitas convertirte en la versión de ti que imaginabas alcanzar para sentirte merecedor de cariño. Me gustaría que pudieras entender que hay muchísimo valor en quien eres ahora, incluso en aquellas partes de ti que todavía estás aprendiendo a comprender.
+
+A veces pienso en lo inmenso que puede ser el universo de una persona. Todo lo que guarda dentro: sus pensamientos, sus recuerdos, sus miedos, sus ilusiones, las cosas que le hacen feliz y aquellas que preferiría no tener que enfrentar. Y cuando pienso en ti, me doy cuenta de que todavía hay tantos pequeños mundos tuyos que me gustaría conocer.
+
+Quiero saber qué cosas te emocionan, cuáles son tus mayores aspiraciones y qué sueños guardas con especial cariño. Quiero escucharte hablar de aquello que te apasiona, incluso si no conozco demasiado del tema, porque me gusta descubrir lo que despierta esa emoción en ti. Quiero conocer tus opiniones, tus perspectivas y esa manera particular que tienes de interpretar las cosas. Me interesa lo que piensas, lo que sientes y todo aquello que te convierte en la persona que eres.
+
+Pero también quiero conocer esos días en los que no te sientes tan seguro de ti mismo. Cuando las cosas no salen como esperabas, cuando te frustras o cuando tus propios pensamientos parecen volverse demasiado difíciles de ordenar. No quisiera que sintieras que debes ocultarme esas partes para conservar una imagen determinada ante mis ojos. No te quiero únicamente cuando sonríes, cuando estás emocionado o cuando todo parece marchar bien. También quiero poder acompañarte cuando necesites detenerte un momento.
+
+Ojalá nunca confundas tus dificultades con tu valor como persona. Equivocarte no te hace menos admirable. Tener miedo no te vuelve débil. Cambiar de opinión no significa que hayas fracasado. Y no alcanzar algo a la primera no debería hacerte olvidar todo el esfuerzo que has puesto en intentarlo.
+
+Hay tantas cosas que admiro de ti, amor, pero no quisiera que pensaras que debes mantenerlas constantemente para que siga viéndolas. No tienes que demostrarme nada. Puedes descansar, puedes tener dudas, puedes no saber qué hacer y puedes permitirte ser imperfecto. No hay una versión de ti que necesites interpretar para merecer que te quieran.
+
+Me gustaría que pudieras reconocer tu propia belleza, no solamente aquella que se encuentra en lo evidente, sino también en tu manera de sentir, en tus intenciones, en tus esfuerzos y en todas esas pequeñas cosas que quizá pasan inadvertidas para ti. Quisiera que algún día pudieras mirar todo lo que has recorrido y sentir orgullo por la persona en la que te estás convirtiendo.
+
+Y si todavía no puedes hacerlo, espero que tengas paciencia contigo mismo. No tienes que aprender a quererte por completo de un día para otro. También mereces recibir cariño mientras aprendes a reconocer el tuyo.
+
+Por mi parte, quiero seguir descubriéndote. No pretendo conocer cada rincón de tu universo ni tener todas las respuestas sobre ti. Me basta con que podamos seguir compartiendo nuestros mundos, con la confianza de mostrarnos tal como somos y la libertad de continuar creciendo.
+
+Porque, entre todas las cosas que podría admirar de ti, hay una que siempre estará por encima de cualquier expectativa: que seas tú.
+
+No tienes que convertirte en alguien más para ser alguien a quien quiero. Tu universo, con todas sus luces y sus sombras, merece ser conocido y querido.
+
+Te amo, mi príncipe hermoso. Nunca lo olvides. ♡</div>
+        </details>
+        
+        <details class="letter-card e5">
+          <summary><span>💌</span><strong>Cuando el océano se agite</strong><small>para los días difíciles</small></summary>
+          <div class="letter-content">05. Cuando el océano se agite
+
+Quiero que guardes estas palabras para aquellos días en los que el mundo parezca pesar un poquito más de lo habitual. Para cuando despiertes sin demasiadas ganas, cuando las cosas no salgan como esperabas, cuando te sientas frustrado contigo mismo o simplemente cuando no encuentres una razón para estar de buen humor. No sé qué traerá cada uno de tus días, ni puedo prometerte que todos serán sencillos, pero sí quiero que sepas algo: no tienes que estar bien todo el tiempo para ser alguien maravilloso.
+
+A veces quisiera que pudieras mirarte con un poquito de la ternura con la que yo te miro. Que pudieras reconocer todo lo que hay en ti, incluso cuando tú mismo no consigues verlo. Porque no eres menos admirable cuando te equivocas, no eres menos valioso cuando te cansas y tampoco pierdes nada de lo que te hace especial cuando atraviesas un momento complicado. No tienes que demostrarme nada, amor. No tienes que convertir cada tristeza en una sonrisa ni encontrarle una enseñanza a cada dificultad.
+
+Me gustaría que conmigo pudieras descansar de todas esas exigencias. Que no sintieras la obligación de tener siempre algo interesante que contar, de responder con entusiasmo o de esconder aquello que te preocupa. Si algún día solo quieres hablar de cualquier tontería, me encantará escucharte; si necesitas contarme algo que te duele, quiero darte ese espacio también. Y si no tienes palabras, tampoco pasa nada. No todos los silencios necesitan una explicación.
+
+Sé que tienes sueños, responsabilidades, preocupaciones y tantas cosas que pasan por tu cabeza. Sé que a veces puedes ser demasiado exigente contigo mismo, que hay momentos en los que las cosas te frustran y otros en los que quizá ni siquiera sabes cómo explicar lo que sientes. No pretendo tener una respuesta para todo, ni quiero hacer como si pudiera solucionar cada problema. Solo quiero acompañarte, aprender a escucharte y recordarte que no tienes por qué cargar con la idea de que debes ser perfecto para merecer cariño.
+
+Y cuando el océano se agite, cuando las olas sean demasiado grandes y el cielo parezca esconder sus estrellas, espero que recuerdes que una tormenta no cambia la belleza del mar. Tú sigues siendo tú, incluso en esos días. Sigues siendo esa persona a la que admiro, que me hace sonreír con sus ocurrencias, que despierta tanta ternura en mí y cuya existencia agradezco de maneras que a veces no sé explicar.
+
+Ojalá pudiera darte un poquito de tranquilidad cuando la necesites. Ojalá mis palabras pudieran convertirse en una manta cálida, en una pausa, en ese pequeño lugar donde no tengas que fingir nada. Y, sobre todo, ojalá nunca olvides que también mereces días tranquilos, paciencia contigo mismo y la oportunidad de descansar.
+
+No tienes que brillar para mí, amor. Me gusta conocerte en todas tus versiones, incluso en aquellas que todavía estás aprendiendo a comprender.
+
+Siempre estaré a tu lado, mi bello esposo. No importa lo que los demás digan de ti, siempre serás tú, mi hermoso Kaelen.</div>
+        </details>
+        
+        <details class="letter-card e6">
+          <summary><span>⭐</span><strong>Todos los cielos que nos esperan</strong><small>nuestros sueños</small></summary>
+          <div class="letter-content">06. Todos los cielos que nos esperan
+
+Amor mío…
+
+Hay tantas cosas que todavía quisiera conocer de ti. Tantos pensamientos que aún no me has contado, tantos sueños que quizá todavía estás construyendo y tantas versiones de ti que iré descubriendo con el paso del tiempo. Y creo que esa es una de las cosas que más ilusión me hacen: saber que, aunque llevemos siete meses compartiendo una parte de nuestras vidas, todavía nos queda muchísimo por descubrir.
+
+Pienso en tu futuro y me descubro deseándote cosas bonitas. Quiero verte alcanzar aquello por lo que tanto te esfuerzas, encontrar oportunidades que te hagan ilusión y sentirte orgulloso de todo lo que has conseguido. Quiero que tengas motivos para celebrar, lugares en los que te sientas tranquilo y personas que sepan apreciar la persona tan maravillosa que eres. Pero también deseo que, si algún día tus planes cambian o el camino se vuelve distinto al que imaginabas, puedas darte permiso para empezar de nuevo. No tienes que tenerlo todo resuelto ahora, mi amor.
+
+Me encantaría conocer cada uno de esos pequeños acontecimientos que algún día se convertirán en recuerdos importantes para ti. Escucharte hablar emocionado de algo que lograste, acompañarte mientras piensas en una nueva idea, conocer tus próximos intereses y descubrir qué cosas harán brillar tus ojos dentro de unos años. Incluso me hace ilusión imaginar todas esas conversaciones que todavía no hemos tenido, las bromas que aún no existen y las pequeñas costumbres que quizá terminaremos haciendo nuestras sin siquiera darnos cuenta.
+
+Y también pienso en todo lo que podríamos construir juntos. En las mañanas que todavía no hemos compartido, en los lugares que nos gustaría conocer, en las celebraciones que nos esperan y hasta en esas tardes ordinarias que algún día podrían convertirse en mis recuerdos favoritos. Me gustaría que siguiéramos aprendiendo el uno del otro, que pudiéramos crecer sin dejar de ser quienes somos y que nunca perdiéramos esa curiosidad por descubrir nuevas cosas del otro. No necesito imaginar un futuro perfecto ni escribir de antemano cada uno de sus capítulos. Me basta con la ilusión de seguir eligiéndonos, de continuar compartiendo nuestros días y de encontrar nuevas razones para enamorarme de los detalles que te hacen ser tú.
+
+Y, entre todos esos futuros que a veces me gusta imaginar, hay uno que ocupa un lugar muy especial en mi corazón: el día de nuestra boda.
+
+Dios, amor mío, ¿puedes imaginarlo? A veces intento pensar en cómo será tenerte frente a mí, mirarte directamente a los ojos y perderme en tu mirada sabiendo que quiero contemplarla por el resto de mi vida. Imagino nuestras manos entrelazadas, nuestras sonrisas nerviosas y todas esas emociones que seguramente no sabré cómo expresar. Quisiera poder decirte «te amo» interminablemente, mirarte y repetirlo tantas veces como me permita la voz. Y después, frente al mundo entero, poder decir con el corazón rebosante de felicidad que te amo, que eres el hombre con quien quiero compartir mi vida y que tengo el privilegio inmenso de llamar **mi esposo**.
+
+No sé cómo será ese día, qué canciones sonarán, qué flores habrá o cuántas lágrimas de felicidad terminaremos derramando. Pero sí sé que, cuando llegue ese momento, quisiera encontrarte al otro lado de mi mirada. Y si pudiera pedir algo, sería que el tiempo se detuviera apenas un instante para poder guardar cada segundo de ese día.
+
+Quiero que persigas tus sueños, amor. Que te permitas cambiar de opinión, equivocarte, descubrir nuevos caminos y convertirte en alguien distinto a quien eres hoy, si eso es lo que deseas. Nunca quisiera que sintieras que tienes que detener tu crecimiento para permanecer a mi lado. Al contrario, me gustaría verte expandir tu mundo, alcanzar tus propias metas y construir una vida en la que también encuentres felicidad por ti mismo.
+
+Nos esperan tantos cielos, tantas mañanas y tantos pequeños universos por conocer. No sé exactamente qué forma tendrán, pero me hace feliz pensar que aún hay muchísimo por vivir. Y entre todas esas cosas que el futuro podría guardar para nosotros, espero que nunca nos falten las ganas de seguir descubriéndonos.</div>
+        </details>
+        
+        <details class="letter-card e7">
+          <summary><span>♡</span><strong>Si volviera a encontrarte</strong><small>una última carta</small></summary>
+          <div class="letter-content">07. Si volviera a encontrarte
+
+Amor mío…
+
+Si algún día pudiera regresar al principio, a ese instante en el que todavía no sabía todo lo que llegarías a significar para mí, creo que volvería a acercarme a ti. Volvería a tener aquellas primeras conversaciones, a descubrir poco a poco tu manera de pensar, tus ocurrencias, tus gustos y todas esas pequeñas particularidades que hoy conozco y que tanto cariño me despiertan. Volvería a escucharte hablar de las cosas que te apasionan, a reírme contigo por cualquier tontería y a sorprenderme cada vez que descubriera algo nuevo de ti.
+
+Y no lo digo porque nuestra historia haya sido perfecta. Hemos tenido días de muchas sonrisas y otros en los que quizá las palabras no fueron suficientes. Hemos aprendido, nos hemos equivocado y también hemos tenido que comprendernos un poquito mejor. Pero, incluso con todo eso, hay algo que permanece: las ganas de seguir conociéndote. Porque quererte no significa pensar que ya lo sé todo de ti, sino tener la ilusión de descubrirte una y otra vez, incluso cuando crea que ya conozco cada rincón de tu universo.
+
+A veces me pregunto si eres consciente de lo mucho que significas para mí. Si sabes que hay días en los que basta con escuchar tu voz para que algo dentro de mí se sienta más tranquilo; que tu risa puede convertirse en el mejor momento de una tarde cualquiera; que me encanta conocer tus pensamientos, incluso aquellos que parecen pequeños o insignificantes. Me gusta que seas tú, con tus ideas, tus sueños, tus maneras de expresarte y hasta esas pequeñas manías que seguramente ni siquiera notas. No necesito que hagas algo extraordinario para recordarme por qué te quiero. Muchas veces, simplemente existes y vuelves a darme una razón.
+
+Y si volviera a encontrarte, quisiera que supieras que volvería a prestar atención a cada detalle. Volvería a enamorarme de tu risa, de tu forma de mirar el mundo y de esa manera tan tuya de ser que no podría confundir con la de nadie más. Volvería a elegir conocerte, a compartir contigo mis días y a construir, poco a poco, todo aquello que todavía nos espera.
+
+No sé cuántas páginas nos quedan por escribir ni qué sorpresas nos tendrá preparadas la vida. Tampoco sé si dentro de muchos años seguiremos recordando exactamente cómo fueron estos primeros siete meses. Pero espero que, cuando miremos hacia atrás, podamos reconocer en estas palabras el comienzo de algo que cuidamos con muchísimo cariño.
+
+Y quiero que sepas algo más: entre todas las cosas bonitas que me han sucedido, conocerte ocupa un lugar que no cambiaría por nada. No porque seas perfecto, sino porque eres tú. Porque he tenido la fortuna de conocer a una persona a la que admiro, quiero y deseo seguir acompañando. Porque, de todas las casualidades que pudieron cruzarse en mi camino, me alegra profundamente que una de ellas haya sido encontrarte.
+
+Así que, si el destino me concediera mil comienzos distintos, o si tuviera que recorrer todos esos caminos otra vez, buscaría la manera de llegar hasta ti. Y cuando finalmente te encontrara, después de tantos caminos y tantas posibilidades, creo que volvería a sentir exactamente lo mismo: qué suerte la mía.
+
+Gracias por estos siete meses, amor. Gracias por ser parte de mis días y por permitirme ser parte de los tuyos. Todavía nos queda muchísimo por vivir, y no sabes cuánto me ilusiona descubrirlo contigo.
+
+Si volviera a encontrarte, te elegiría otra vez. Y después, cuando llegara el mañana, volvería a hacerlo.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE DIBUJOS DESPLEGABLES -->
+    <section id="doodles">
+      <div class="kicker">02 · garabatos con amor</div>
+      <h2>Dibujos para ti</h2>
+      <p style="max-width:480px;margin:0 auto 18px;color:#8aadc0">Pequeños dibujos, grandes verdades. Toca cada mensaje para descubrirlo.</p>
+      
+      <div class="doodles">
+        <!-- Dibujo 1 -->
+        <div class="doodle-card" id="card-d1">
+          <button type="button" class="doodle-trigger" onclick="toggleDoodle('card-d1')" aria-expanded="false">
+            <span class="trigger-content">
+              <span class="trigger-icon">💕</span>
+              <span class="trigger-title">Tú y yo, siempre…</span>
+            </span>
+            <span class="trigger-arrow">▼</span>
+          </button>
+          <div class="doodle-panel">
+            <div class="doodle-flex">
+              <div class="doodle-img-wrap">
+                <img src="dibujo1.png" alt="Nosotros de cerca" onerror="this.style.display='none'">
+              </div>
+              <div class="doodle-text">
+                <h3>Tú y yo, siempre…</h3>
+                <p>«Cuando estamos así de cerca, el mundo se vuelve un poco más suave.»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dibujo 2 -->
+        <div class="doodle-card" id="card-d2">
+          <button type="button" class="doodle-trigger" onclick="toggleDoodle('card-d2')" aria-expanded="false">
+            <span class="trigger-content">
+              <span class="trigger-icon">🏰</span>
+              <span class="trigger-title">Nuestro pequeño castillo</span>
+            </span>
+            <span class="trigger-arrow">▼</span>
+          </button>
+          <div class="doodle-panel">
+            <div class="doodle-flex">
+              <div class="doodle-img-wrap">
+                <img src="dibujo2.png" alt="Nuestro castillo" onerror="this.style.display='none'">
+              </div>
+              <div class="doodle-text">
+                <h3>Nuestro pequeño castillo</h3>
+                <p>«Aunque sea de noche y el camino sea largo, contigo cualquier lugar se siente como casa.»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dibujo 3 -->
+        <div class="doodle-card" id="card-d3">
+          <button type="button" class="doodle-trigger" onclick="toggleDoodle('card-d3')" aria-expanded="false">
+            <span class="trigger-content">
+              <span class="trigger-icon">🔑</span>
+              <span class="trigger-title">K + O</span>
+            </span>
+            <span class="trigger-arrow">▼</span>
+          </button>
+          <div class="doodle-panel">
+            <div class="doodle-flex">
+              <div class="doodle-img-wrap">
+                <img src="dibujo3.png" alt="Llaverito K+O" onerror="this.style.display='none'">
+              </div>
+              <div class="doodle-text">
+                <h3>K + O</h3>
+                <p>«Dos personitas unidas por una misma llave… y un mismo corazón.»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="memories">
+      <div class="kicker">03 · nuestro pequeño archivo</div>
+      <h2>Mi recuerdo favorito</h2>
+      <div class="panel" style="text-align:left;max-width:680px;margin:0 auto">
+        <p style="margin-bottom:14px;color:#d8e8f0">Mi recuerdo favorito de estos siete meses eres tú, amor.</p>
+        <p style="margin-bottom:14px">Si tuviera que guardar algo de todo este tiempo, no elegiría una fecha concreta ni un momento que pudiera señalar en el calendario. Me quedaría contigo; con la posibilidad de amanecer y saber que estás a mi lado, de compartir mis días contigo y de ir descubriendo, poquito a poquito, todas las formas en las que eres tú.</p>
+        <p style="margin-bottom:14px">Me gusta verte feliz, emocionado cuando algo te ilusiona, orgulloso cuando consigues algo por lo que has trabajado. También quiero conocer esos días en los que estás triste, frustrado o simplemente no sabes muy bien qué hacer con lo que sientes. No porque quiera que estés mal, sino porque no quisiera conocer únicamente tus momentos más sencillos: quiero que puedas ser tú conmigo.</p>
+        <p style="margin-bottom:14px">Quiero seguir aprendiendo de tus sueños, escuchar las ideas que te entusiasman y acompañarte mientras descubres qué camino quieres tomar.</p>
+        <p style="margin-bottom:14px">Hay algo especialmente bonito de quererte: cada día puedo descubrir una parte nueva de ti. A veces es una ocurrencia, una opinión, una historia que no conocía o una manera tuya de mirar algo. Otras veces es simplemente verte siendo tú, sin intentar hacer nada extraordinario.</p>
+        <p style="margin-bottom:14px">No sé si algún día podremos recordar cada conversación o todos los detalles de estos primeros meses. Pero espero que nunca se nos olvide cómo se siente esto: habernos encontrado, elegirnos y seguir teniendo curiosidad por la persona que tenemos enfrente.</p>
+        <p style="margin-bottom:14px">Así que, si me preguntaras cuál ha sido mi recuerdo favorito, no sabría escoger una sola escena. Mi respuesta seguirías siendo tú, amor. Tú en tus días buenos y en los difíciles, en tus risas y tus silencios, con tus inseguridades, tus planes y todo eso que todavía estás descubriendo de ti mismo. Me hace feliz conocerte en todas esas versiones y seguir encontrando, en cada una, a la persona que amo.</p>
+        <p style="text-align:right;color:#a8c8d8;margin-top:8px">— Oliver ♡</p>
+      </div>
+    </section>
+
+    <section id="ocean">
+      <div class="kicker">04 · siete lucecitas bajo el agua</div>
+      <h2>Nuestro pequeño océano</h2>
+      <p style="color:#8aadc0">Siete medusas, siete deseos. Toca cada una para descubrir el suyo.</p>
+      <div class="ocean-row">
+        <button class="ocean-light" onclick="showOcean(0)"><span>🪼</span><small>Quédate</small></button>
+        <button class="ocean-light" onclick="showOcean(1)"><span>🪼</span><small>Ríe conmigo</small></button>
+        <button class="ocean-light" onclick="showOcean(2)"><span>🪼</span><small>Cumple tus sueños</small></button>
+        <button class="ocean-light" onclick="showOcean(3)"><span>🪼</span><small>Sé feliz</small></button>
+        <button class="ocean-light" onclick="showOcean(4)"><span>🪼</span><small>Sigamos</small></button>
+        <button class="ocean-light" onclick="showOcean(5)"><span>🪼</span><small>Construyamos</small></button>
+        <button class="ocean-light" onclick="showOcean(6)"><span>🪼</span><small>Para siempre</small></button>
+      </div>
+      <p id="oceanMessage"></p>
+    </section>
+
+    <section id="song">
+      <div class="kicker">05 · una melodía en una botella</div>
+      <h2>Dos canciones, un mismo sentimiento</h2>
+      <p style="max-width:480px;margin:0 auto;color:#8aadc0">Quería que estas dos canciones también vivieran aquí, junto con las razones por las que me hacen pensar en ti.</p>
+      <div class="music-list">
+        <div class="song">
+          <div class="music-icon">🌙</div>
+          <h3>Los aretes de la luna</h3>
+          <p style="color:#7a9eb0;font-size:0.88rem;margin-bottom:10px">Adrián Bello</p>
+          <p>Dicen que hay tesoros que no se encuentran buscando, sino que aparecen cuando menos los esperamos. Cuando escucho esta canción, pienso en ti, amor.</p>
+          <p>Me gusta imaginar que, entre todas las maravillas que existen en este mundo, tuve la suerte de encontrar una que jamás habría sabido imaginar por mi cuenta.</p>
+          <p>Si pudiera encontrar los aretes que le faltan a la luna, creo que los guardaría cuidadosamente para ti.</p>
+          <p style="color:#c8dce8"><strong>Con todo mi cariño, para ti, mi más bonita fortuna.</strong></p>
+          <div style="margin-top:14px;border-radius:12px;overflow:hidden;">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6Cjiy3kFcXCprOjOJm6One?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="song">
+          <div class="music-icon">💗</div>
+          <h3>Bésame mucho</h3>
+          <p style="color:#7a9eb0;font-size:0.88rem;margin-bottom:10px">Andrea Bocelli</p>
+          <p>Hay canciones que parecen guardar un pedacito de aquello que uno siente y no siempre sabe cómo expresar. Cuando la escucho, pienso en ti.</p>
+          <p>«Bésame mucho, como si fuera esta noche la última vez». No quisiera interpretarlo como una despedida, sino como una invitación a vivir nuestro amor con la misma ilusión de siempre.</p>
+          <p>Quiero disfrutarte hoy, mañana y en todos los días que podamos compartir.</p>
+          <p style="color:#c8dce8"><strong>Bésame mucho, amor. No porque tema que sea la última vez, sino porque quiero que cada vez sepas que eres profundamente amado.</strong></p>
+          <div style="margin-top:14px;border-radius:12px;overflow:hidden;">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/78Zx8hWBIhXp5CFj9eMxhP?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="secret">
+      <div class="kicker">06 · algo escondido entre las olas</div>
+      <h2>Una sorpresa solo para ti</h2>
+      <p style="margin-bottom:18px;color:#8aadc0">Preparé un video para ti. Quiero que lo veas cuando tengas un ratito tranquilo.</p>
+      <div class="panel" style="max-width:720px;margin:0 auto">
+        <div class="video-wrap">
+          <video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#0a1a2c;">
+            <source src="sorpresa.MP4" type="video/mp4">
+            <source src="sorpresa.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <button class="btn" style="margin-top:22px" onclick="document.getElementById('finalNote').classList.toggle('show')">
+        Abrir
+      </button>
+      <article id="finalNote" class="panel final-letter">
+Sobre este pequeño recuerdo…
+
+Amor, hice este video porque hubo algo que, mientras pensaba en nosotros, me pareció especialmente bonito: darme cuenta de que no sé en qué momento me enamoré de ti.
+
+Y no lo digo porque no recuerde cómo nos conocimos o cómo comenzaron las cosas entre nosotros. Me refiero a que no sabría señalar un instante en el que todo cambió. No sé cuándo dejaste de ser simplemente alguien con quien compartía mis días y comenzaste a ser alguien a quien quería encontrar en todos los que todavía me quedaban por vivir.
+
+No sé en qué momento empecé a imaginar un futuro contigo, cuándo comencé a pensar en cómo sería tenerte a mi lado en tantos momentos que todavía no han sucedido o cuándo te convertiste en una presencia tan constante en mis pensamientos. Tampoco recuerdo cuándo mi corazón empezó a guardar tu nombre con tanto cariño, incluso antes de que yo pudiera comprender por qué lo hacía.
+
+Y creo que lo más curioso es que probablemente todo sucedió mientras simplemente éramos nosotros. Mientras hablábamos, nos conocíamos, compartíamos nuestras pequeñas cosas y construíamos, sin darnos demasiada cuenta, algo que terminaría significando tanto para mí.
+
+Hasta que, en algún momento, todas esas pequeñas cosas parecieron juntarse y pude entender lo que había estado sucediendo.
+
+Oh…
+
+Es que lo amo.
+
+Y fue precisamente esa sensación la que quise guardar en este video. Quise reunir un pequeño pedacito de todo aquello que me hace pensar en ti, de lo que hemos compartido y de lo que significa tenerte en mi vida. No para intentar resumir nuestra historia ni para encontrar una explicación definitiva a mis sentimientos, sino para conservar algo de esta maravillosa realización.
+
+Quizá algún día volvamos a verlo y nos encontremos con dos versiones de nosotros que han cambiado, que han aprendido y que han vivido muchísimas cosas más. Quizá para entonces tengamos nuevos recuerdos, otras fotografías y un montón de historias que todavía no conocemos. Pero me gustaría que, al regresar a este pequeño video, pudiéramos recordar algo: que hubo un momento en nuestras vidas en el que yo miré todo lo que estaba sintiendo por ti y descubrí, con una
+      </article>
+    </section>
+
+    <footer>
+      <div class="hearts">🪼</div>
+      <p>Hecho por Oliver, con amor para Kaelen.</p>
+      <p>Por siete meses compartidos y todas las lucecitas que todavía nos esperan.</p>
+    </footer>
+  </main>
+</div>
+
+<script>
+const oceanNotes = [
+  "Mi deseo es seguir compartiendo amaneceres contigo, incluso cuando cada uno despierte desde su rincón del mundo.",
+  "Que nunca nos falten las tonterías, las ocurrencias y esas risas que convierten un día normal en uno que quiero guardar.",
+  "Quiero verte acercarte a tus metas a tu ritmo, y celebrar contigo cada paso que te acerque a lo que sueñas.",
+  "Deseo que encuentres alegría en cosas pequeñas y que también puedas descansar cuando la necesites.",
+  "Que sigamos descubriendo canciones, ideas, juegos y rincones nuevos de nuestros mundos.",
+  "Que construyamos algo amable, honesto y nuestro; algo que podamos cuidar entre los dos.",
+  "Y que, cuando mires atrás, encuentres muchos momentos en los que te sentiste querido siendo exactamente tú."
+];
+
+function showOcean(i) {
+  const p = document.getElementById('oceanMessage');
+  p.textContent = oceanNotes[i];
+  p.classList.add('show');
+}
+
+/* LÓGICA DE INTERACCIÓN PARA LOS DIBUJOS */
+function toggleDoodle(cardId) {
+  const card = document.getElementById(cardId);
+  if (card) {
+    const isActive = card.classList.toggle('active');
+    const btn = card.querySelector('.doodle-trigger');
+    if (btn) {
+      btn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    }
+  }
+}
+
+/* EFECTO DE BURBUJAS FLOTANTES */
+for (let i = 0; i < 12; i++) {
+  const b = document.createElement('i');
+  b.className = 'bubble';
+  const s = 3 + Math.random() * 9;
+  b.style.width = s + 'px';
+  b.style.height = s + 'px';
+  b.style.left = Math.random() * 100 + '%';
+  b.style.animationDuration = (16 + Math.random() * 18) + 's';
+  b.style.animationDelay = (-Math.random() * 25) + 's';
+  document.body.appendChild(b);
+}
+</script>
+</body>
+</html>
