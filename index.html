@@ -280,7 +280,7 @@ p { color: #b8d0dc; font-size: 1rem; }
 .letter-card:hover { transform: translateY(-2px); }
 .letter-card[open]:hover { transform: none; }
 
-/* SECCIÓN DE DIBUJOS DESPLEGABLES */
+/* SECCIÓN DE DIBUJOS */
 .doodles {
   display: flex;
   flex-direction: column;
@@ -359,9 +359,9 @@ p { color: #b8d0dc; font-size: 1rem; }
   gap: 24px;
 }
 .doodle-img-wrap {
-  flex: 0 0 42%;
-  max-width: 380px;
-  min-width: 250px;
+  flex: 0 0 45%;
+  max-width: 400px;
+  min-width: 240px;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -477,12 +477,12 @@ p { color: #b8d0dc; font-size: 1rem; }
   max-width: 700px;
   margin: 0 auto;
 }
-.video-wrap iframe {
-  position: absolute;
-  inset: 0;
+.video-wrap video {
   width: 100%;
   height: 100%;
-  border: 0;
+  object-fit: contain;
+  background: #0a1a2c;
+  display: block;
 }
 .final-letter {
   display: none;
@@ -795,7 +795,7 @@ Amor mío…
 
 Hay tantas cosas que todavía quisiera conocer de ti. Tantos pensamientos que aún no me has contado, tantos sueños que quizá todavía estás construyendo y tantas versiones de ti que iré descubriendo con el paso del tiempo. Y creo que esa es una de las cosas que más ilusión me hacen: saber que, aunque llevemos siete meses compartiendo una parte de nuestras vidas, todavía nos queda muchísimo por descubrir.
 
-Pienso en tu futuro y me descubro deseándote cosas bonitas. Quiero verte alcanzar aquello por lo que tanto te esfuerzas, encontrar oportunidades que te hagan ilusión y sentirte orgulloso de todo lo que has conseguido. Quiero que tengas motivos para celebrar, lugares en los que te sientas tranquilo y personas que sepan apreciar la persona tan maravillosa que eres. Pero también deseo que, si algún día tus planes cambian o el camino se vuelve distinto al que imaginabas, puedas darte permiso para empezar de nuevo. No tienes que tenerlo todo resuelto ahora, mi amor.
+Pienso en tu futuro y me descubro deseándote cosas bonitas. Quiero verte alcanzar aquello por lo que tanto te esfuerzas, encontrar oportunidades que te hagan ilusión y sentirte orgulloso de todo lo que has conseguido. Quiero que tengas motivos para celebrar, lugares en los que te sientas tranquilo y personas que sepan apreciar la persona tan maravillosa que eres. Pero también deseo que, si algún día tus plans cambian o el camino se vuelve distinto al que imaginabas, puedas darte permiso para empezar de nuevo. No tienes que tenerlo todo resuelto ahora, mi amor.
 
 Me encantaría conocer cada uno de esos pequeños acontecimientos que algún día se convertirán en recuerdos importantes para ti. Escucharte hablar emocionado de algo que lograste, acompañarte mientras piensas en una nueva idea, conocer tus próximos intereses y descubrir qué cosas harán brillar tus ojos dentro de unos años. Incluso me hace ilusión imaginar todas esas conversaciones que todavía no hemos tenido, las bromas que aún no existen y las pequeñas costumbres que quizá terminaremos haciendo nuestras sin siquiera darnos cuenta.
 
@@ -839,7 +839,7 @@ Si volviera a encontrarte, te elegiría otra vez. Y después, cuando llegara el 
       </div>
     </section>
 
-    <!-- SECCIÓN DE DIBUJOS DESPLEGABLES -->
+    <!-- SECCIÓN DE DIBUJOS CORREGIDA -->
     <section id="doodles">
       <div class="kicker">02 · garabatos con amor</div>
       <h2>Dibujos para ti</h2>
@@ -858,7 +858,7 @@ Si volviera a encontrarte, te elegiría otra vez. Y después, cuando llegara el 
           <div class="doodle-panel">
             <div class="doodle-flex">
               <div class="doodle-img-wrap">
-                <img src="dibujo1.png" alt="Nosotros de cerca" onerror="this.style.display='none'">
+                <img src="dibujo1.png" alt="Nosotros de cerca">
               </div>
               <div class="doodle-text">
                 <h3>Tú y yo, siempre…</h3>
@@ -880,7 +880,7 @@ Si volviera a encontrarte, te elegiría otra vez. Y después, cuando llegara el 
           <div class="doodle-panel">
             <div class="doodle-flex">
               <div class="doodle-img-wrap">
-                <img src="dibujo2.png" alt="Nuestro castillo" onerror="this.style.display='none'">
+                <img src="dibujo2.png" alt="Nuestro castillo">
               </div>
               <div class="doodle-text">
                 <h3>Nuestro pequeño castillo</h3>
@@ -902,7 +902,7 @@ Si volviera a encontrarte, te elegiría otra vez. Y después, cuando llegara el 
           <div class="doodle-panel">
             <div class="doodle-flex">
               <div class="doodle-img-wrap">
-                <img src="dibujo3.png" alt="Llaverito K+O" onerror="this.style.display='none'">
+                <img src="dibujo3.png" alt="Llaverito K+O">
               </div>
               <div class="doodle-text">
                 <h3>K + O</h3>
@@ -924,7 +924,7 @@ Si volviera a encontrarte, te elegiría otra vez. Y después, cuando llegara el 
         <p style="margin-bottom:14px">Quiero seguir aprendiendo de tus sueños, escuchar las ideas que te entusiasman y acompañarte mientras descubres qué camino quieres tomar.</p>
         <p style="margin-bottom:14px">Hay algo especialmente bonito de quererte: cada día puedo descubrir una parte nueva de ti. A veces es una ocurrencia, una opinión, una historia que no conocía o una manera tuya de mirar algo. Otras veces es simplemente verte siendo tú, sin intentar hacer nada extraordinario.</p>
         <p style="margin-bottom:14px">No sé si algún día podremos recordar cada conversación o todos los detalles de estos primeros meses. Pero espero que nunca se nos olvide cómo se siente esto: habernos encontrado, elegirnos y seguir teniendo curiosidad por la persona que tenemos enfrente.</p>
-        <p style="margin-bottom:14px">Así que, si me preguntaras cuál ha sido mi recuerdo favorito, no sabría escoger una sola escena. Mi respuesta seguirías siendo tú, amor. Tú en tus días buenos y en los difíciles, en tus risas y tus silencios, con tus inseguridades, tus planes y todo eso que todavía estás descubriendo de ti mismo. Me hace feliz conocerte en todas esas versiones y seguir encontrando, en cada una, a la persona que amo.</p>
+        <p style="margin-bottom:14px">Así que, si me preguntaras cuál ha sido mi recuerdo favorito, no sabría escoger una sola escena. Mi respuesta seguirías siendo tú, amor. Tú en tus días buenos y en los difíciles, en tus risas y tus silencios, con tus inseguridades, tus plans y todo eso que todavía estás descubriendo de ti mismo. Me hace feliz conocerte en todas esas versiones y seguir encontrando, en cada una, a la persona que amo.</p>
         <p style="text-align:right;color:#a8c8d8;margin-top:8px">— Oliver ♡</p>
       </div>
     </section>
@@ -977,15 +977,17 @@ Si volviera a encontrarte, te elegiría otra vez. Y después, cuando llegara el 
       </div>
     </section>
 
+    <!-- SECCIÓN DE VIDEO CORREGIDA -->
     <section id="secret">
       <div class="kicker">06 · algo escondido entre las olas</div>
       <h2>Una sorpresa solo para ti</h2>
       <p style="margin-bottom:18px;color:#8aadc0">Preparé un video para ti. Quiero que lo veas cuando tengas un ratito tranquilo.</p>
       <div class="panel" style="max-width:720px;margin:0 auto">
         <div class="video-wrap">
-          <video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#0a1a2c;">
+          <video controls playsinline webkit-playsinline preload="auto">
             <source src="sorpresa.MP4" type="video/mp4">
             <source src="sorpresa.mp4" type="video/mp4">
+            Tu navegador no admite la reproducción de este video.
           </video>
         </div>
       </div>
@@ -1040,7 +1042,6 @@ function showOcean(i) {
   p.classList.add('show');
 }
 
-/* LÓGICA DE INTERACCIÓN PARA LOS DIBUJOS */
 function toggleDoodle(cardId) {
   const card = document.getElementById(cardId);
   if (card) {
@@ -1052,7 +1053,6 @@ function toggleDoodle(cardId) {
   }
 }
 
-/* EFECTO DE BURBUJAS FLOTANTES */
 for (let i = 0; i < 12; i++) {
   const b = document.createElement('i');
   b.className = 'bubble';
